@@ -3,32 +3,31 @@ import math
 cost = float(input('price'))
 paid = float(input('paid'))
 
+#pr....
 x = paid - cost
 print x
 
-#you will find dollars
+#find dollars
 
 dollars = math.floor(x)
-print dollars
+print 'dollars = ' + str(dollars)
 
 #you will find quarters
 
 quarters = math.floor((x - dollars)/.25)
-print quarters
+print 'quarters = ' + str(quarters)
 
 #you will find dimes
 
-dimes = math.floor((x - dollars)*.25/.10)
-print dimes
+dimes = math.floor((x - dollars - quarters*.25)/.10)
+print 'dimes = ' + str(dimes)
 
 #you will find nickles
 
-nickles = math.floor((((x - dollars)*.25)*.10)/.05)
-print nickles
+nickles = math.floor((x - dollars - quarters*.25 - dimes*.10)/.05)
+print 'nickles = ' + str(nickles)
 
 #you will find pennies
 
-pennies = math.floor((((x - dollars)*.25)*.10)*.05/.01)
-print pennies
-
-
+pennies = 100*(x - dollars - quarters*.25 - dimes*.10 - nickles*.05)
+print 'pennies = ' + str(pennies)
