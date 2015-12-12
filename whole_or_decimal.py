@@ -7,6 +7,6 @@ elif x > 0:
 else:
     print 'This number is a negative number!'
 if x%2:
-    print 'This is a whole number!'
+    print 'This is a even number!'
 else:
-    print 'This is a decimal!'
+    print 'This is an odd number!'
